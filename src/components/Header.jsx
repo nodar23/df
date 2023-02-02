@@ -44,8 +44,10 @@ return <header className="header">
             <h1>Еда для собак</h1>
             <p className="header__bottom-tagline">Вкусно, быстро и полезно</p>
             <button className="header__catalog-btn" type="button" >Каталог</button>
+
+            <p className="footer__text">Сайт разработан с ошибками и нарушениями дедлайнов, но зато без потери мотивации и интереса :D</p>
         </div>
-        
+
         </header>
 }
                 

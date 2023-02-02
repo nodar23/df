@@ -14,7 +14,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
-    padding: 20px;
+    padding:20px 0px 20px 0px;
     border-radius: 20px;
     border: solid 0px #edea22;
 }
@@ -22,6 +22,7 @@ html {
 .header__column-one {
     justify-self: start;
     align-self: center;
+    padding-left: 100px;
 }
 
 .header__column-one-logo {
@@ -43,22 +44,28 @@ html {
     justify-self: end;
     font-size: 16px;
     cursor: pointer;
+    padding-right: 100px;
+    padding-top: 25px;
 }
 
-.header__column-three-link {
+.header__column-three-link,
+.header__column-three-link:active,
+.header__column-three-link a {
     text-decoration: none;
     padding-left: 15px;
+    color: #414141;
 }
 
-.header__column-three-link:hover {
-    font-weight: 600;
+.header__column-three-link:hover,
+.header__column-three-link a:hover {
+    text-shadow: 0.3px 0 0 #414141;
 }
 
 .header__bottom {
     width: auto;
     height: auto;
     background-color: #ffffff;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 70px 0px 70px;
 }
 
 header h1 {
@@ -78,20 +85,69 @@ header h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     border: solid 0px #edea22;
+    font-size: 14px;
     margin-top: 300px;    /*удалить позже*/
+}
+
+.footer__columns a:active,
+.footer__columns a {
+    text-decoration: none;
+    color: #414141;
+}
+
+.footer__columns a:hover {
+    text-shadow: 0.3px 0 0 currentColor;
+
+}
+
+.footer__column-one {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 100px;
+}
+
+.footer__column-one-logo {
+    width: auto;
+    height: 30px;
+    opacity: 0.8;
 }
 
 .footer__column-two {
     justify-self: center;
+    justify-content: space-between;
+}
+
+.footer__columns ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
 }
 
 .footer__column-three {
     justify-self: center;
 }
 
-..footer__column-four {
+.footer__column-four {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
     justify-self: end;
+    padding-right: 100px;
+}
+
+.footer__column-four-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer__column-four-phone {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer__column-four-telegram {
+    width: 15px;
+    height: auto;
 }
