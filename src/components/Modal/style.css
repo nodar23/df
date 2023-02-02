@@ -69,10 +69,6 @@ input {
     font-size: 16px;
 }
 
-input:focus {
-    border-color:  #edea22;
-}
-
 .modal__form-btn {
     width: auto;
     height: 50px;
@@ -86,9 +82,7 @@ input:focus {
 }
 
 .modal__form-btn:hover {
-    font-weight: 600;
-    /* background-color: #edea22; */
-
+    text-shadow: 0.5px 0 0 #565656;
 }
 
 .link {

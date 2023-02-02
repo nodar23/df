@@ -73,7 +73,7 @@ header h1 {
 }
 
 .profile {
-    padding: 20px;
+    padding: 0px 70px 0px 70px;
 }
 
 .profile__title {
@@ -99,8 +99,7 @@ header h1 {
 }
 
 .footer__columns a:hover {
-    text-shadow: 0.3px 0 0 currentColor;
-
+    text-shadow: 0.3px 0 0 #414141;
 }
 
 .footer__column-one {
