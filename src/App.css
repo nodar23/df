@@ -76,7 +76,7 @@ html {
     width: auto;
     height: auto;
     background-color: #ffffff;
-    padding: 0px 70px 0px 70px;
+    padding: 0px 100px 0px 100px;
 }
 
 header h1 {
@@ -84,7 +84,7 @@ header h1 {
 }
 
 .profile {
-    padding: 0px 70px 0px 70px;
+    padding: 0px 100px 0px 100px;
 }
 
 .profile__title {

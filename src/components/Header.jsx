@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 import Context from "../Context";
+import { useNavigate } from "react-router-dom";
 
 import Logo from "./img/logo.svg";
 import SigninLogo from "./img/signin.svg";
@@ -14,11 +15,16 @@ const Header = () => {
         el.preventDefault();
         setModalActive(prev => !prev);
     }
+
+    const navigate = useNavigate();
+
     const logOut = (el) => {
         el.preventDefault();
         localStorage.removeItem("user-9-gr");
         setUser("");
+        navigate("/");
     }
+
 
 return <header className="header">
         <div className="header__columns">
