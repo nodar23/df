@@ -1,5 +1,5 @@
 html {
-    /* background-color:  #edea22; */
+    /* background-color:  #fff700; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:  #414141;;
 }
@@ -10,13 +10,13 @@ html {
 }
 
 .header__columns {
-    background-color:  #edea22;
+    background-color: #fff700;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     padding:20px 0px 20px 0px;
     border-radius: 20px;
-    border: solid 0px #edea22;
+    border: solid 0px #fff700;
 }
 
 .header__column-one {
@@ -39,36 +39,56 @@ html {
     margin: 0px;
 }
 
+.header__column-two {
+    justify-self: start;
+    align-self: flex-end;
+    padding-left: 100px;
+}
 
-.header__column-three-menu {
+.header__column-two-catalog-btn {
+    border: solid 0px #414141;
+    border-radius: 10px;
+    color: #414141 ;
+    font-weight: 400;
+    background-color: #ffffff;
+    padding: 8px 15px 8px 15px;
+}
+
+.header__column-two-catalog-btn:hover {
+    text-shadow: 0.3px 0 0 #414141;
+    cursor: pointer;
+}
+
+.header__column-four-menu {
     justify-self: end;
+    align-self: flex-end;
     font-size: 16px;
     cursor: pointer;
     padding-right: 100px;
     padding-top: 25px;
 }
 
-.header__column-three-link,
-.header__column-three-link:active,
-.header__column-three-link a {
+.header__column-four-link,
+.header__column-four-link:active,
+.header__column-four-link a {
     text-decoration: none;
     padding-left: 15px;
     color: #414141;
 }
 
-.header__column-three-link:hover,
-.header__column-three-link a:hover {
+.header__column-four-link:hover,
+.header__column-four-link a:hover {
     text-shadow: 0.3px 0 0 #414141;
 }
 
-.header__column-three-signin,
-.header__column-three-signout {
+.header__column-four-signin,
+.header__column-four-signout {
     width: 30px;
     height: auto;
 }
 
-.header__column-three-signin:hover, 
-.header__column-three-signout:hover {
+.header__column-four-signin:hover, 
+.header__column-four-signout:hover {
     scale: 1.1;
 }
 
@@ -91,14 +111,28 @@ header h1 {
     font-weight: 400;
 }
 
+.profile__btn {
+    border: solid 0px #414141;
+    border-radius: 10px;
+    color: #414141 ;
+    font-weight: 400;
+    background-color: #fff700;
+    padding: 8px 15px 8px 15px;
+}
+
+.profile__btn:hover {
+    text-shadow: 0.3px 0 0 #414141;
+    cursor: pointer;
+}
+
 .footer__columns {
-    background-color:  #edea22;
+    background-color:  #fff700;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     padding: 10px;
     border-radius: 20px;
-    border: solid 0px #edea22;
+    border: solid 0px #fff700;
     font-size: 14px;
     margin-top: 300px;    /*удалить позже*/
 }

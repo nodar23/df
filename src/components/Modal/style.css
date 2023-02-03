@@ -70,7 +70,7 @@ input {
 }
 
 input:hover {
-    border: 2px solid #edea22 ;
+    border: 2px solid #fff700 ;
 }
 
 .modal__form-btn {
@@ -82,7 +82,7 @@ input:hover {
     color: #565656;
     border: none;
     border-radius: 15px;
-    background-color: #edea22;
+    background-color: #fff700;
 }
 
 .modal__form-btn:hover {
