@@ -61,6 +61,17 @@ html {
     text-shadow: 0.3px 0 0 #414141;
 }
 
+.header__column-three-signin,
+.header__column-three-signout {
+    width: 30px;
+    height: auto;
+}
+
+.header__column-three-signin:hover, 
+.header__column-three-signout:hover {
+    scale: 1.1;
+}
+
 .header__bottom {
     width: auto;
     height: auto;

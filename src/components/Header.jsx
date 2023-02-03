@@ -4,6 +4,8 @@ import Search from "./Search";
 import Context from "../Context";
 
 import Logo from "./img/logo.svg";
+import SigninLogo from "./img/signin.svg";
+import SignoutLogo from "./img/signout.svg";
 
 const Header = () => {
 
@@ -34,8 +36,12 @@ return <header className="header">
             <nav className="header__column-three-menu">
                 {/* true && true */}
                 {user && user.name && <Link className="header__column-three-link" to={PATH + "profile"}>{user.name}</Link>}
-                {!user && <a className="header__column-three-link" onClick={logIn}>Войти</a>}
-                {user && <a className="header__column-three-link" onClick={logOut}>Выйти</a>}
+                {!user && <a className="header__column-three-link" onClick={logIn}>
+                    <img className="header__column-three-signin" src={SigninLogo} alt="signin" />
+                    </a>}
+                {user && <a className="header__column-three-link" onClick={logOut}>
+                    <img className="header__column-three-signout" src={SignoutLogo} alt="signin" />
+                    </a>}
             </nav>
 
         </div>
