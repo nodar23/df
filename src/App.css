@@ -161,3 +161,7 @@ header h1 {
     width: 15px;
     height: auto;
 }
+
+.footer__column-four-telegram:hover {
+    scale: 1.05;
+}
