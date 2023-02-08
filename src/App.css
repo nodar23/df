@@ -2,7 +2,7 @@ html {
     /* background-color:  #fff700; */
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:  #000000;;
+    color:  #000000;
 }
 
 .header {
@@ -24,6 +24,8 @@ html {
     justify-self: start;
     align-self: center;
     padding-left: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .header__column-one-logo {
@@ -38,6 +40,12 @@ html {
     font-weight: 600;
     font-size: 16px;
     margin: 0px;
+    text-decoration: none;
+    color: #000000;
+}
+
+Link {
+    text-decoration: none;
 }
 
 .header__column-two {
@@ -139,13 +147,6 @@ html {
 .header__column-four-signin:hover, 
 .header__column-four-signout:hover {
     scale: 1.1;
-}
-
-.header__bottom {
-    width: auto;
-    height: auto;
-    background-color: #ffffff;
-    padding: 0px 100px 0px 100px;
 }
 
 header h1 {

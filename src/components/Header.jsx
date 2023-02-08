@@ -30,8 +30,8 @@ return <header className="header">
         <div className="header__columns">
 
             <div className="header__column-one">
-                <img className="header__column-one-logo" src={Logo} alt='logo' />
-                <p className="header__column-one-text" to={PATH}>Сытый пёс</p>
+               <Link to={PATH}><img className="header__column-one-logo" src={Logo} alt='logo'/></Link>
+               <Link className="header__column-one-text" to={PATH}>Сытый пёс</Link>
             </div>
 
             <div className="header__column-two">
@@ -56,12 +56,7 @@ return <header className="header">
 
         </div>
 
-        <div className="header__bottom">
-            <h1>Еда для собак</h1>
-            <p className="header__bottom-tagline">Вкусно, быстро и полезно</p>
-
             <p className="footer__text">Сайт разработан с ошибками и нарушениями дедлайнов, но зато без потери мотивации и интереса :D</p>
-        </div>
 
         </header>
 }
