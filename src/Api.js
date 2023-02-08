@@ -4,7 +4,7 @@ class Api {
         this.group = "9-gr";
         this.token = token;
     }
-    signUp(body) { // регистрация
+    signUp(body) {
         body.group = this.group;
         return fetch(`${this.path}/signup`, {
             method: "POST",
@@ -14,7 +14,7 @@ class Api {
             body: JSON.stringify(body)
         });
     }
-    signIn(body) { // авторизация
+    signIn(body) {
         return fetch(`${this.path}/signin`, {
             method: "POST",
             headers: {
