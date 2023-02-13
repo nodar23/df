@@ -25,6 +25,17 @@ const [api, setApi] = useState(new Api(token));
 const [goods, setGoods] = useState([]);
 const [visibleGoods, setVisibleGoods] = useState(goods);
 
+useEffect(() => {
+    if (token) {
+        api.getProducts()
+            .then(res => res.json())
+            .then(data => {
+                setGoods(data.products);
+                setVisibleGoods(goods)
+            })
+    }
+}, [goods]) 
+
 
 useEffect(() => {
     setApi(new Api(token));
@@ -70,14 +81,12 @@ return (
             </main>
             <Footer />
         </div>
-        {/* 
-                isActive, setState - параметры, которые работают внутри компонента Modal
-                modalActive, setModalActive - значения, которые сохраняются внутри параметров
-            */}
         <Modal />
     </Context.Provider>
 )
 }
+
+
 export default App;
 
 

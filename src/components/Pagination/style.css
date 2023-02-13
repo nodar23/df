@@ -1,0 +1,13 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 35px;
+}
+
+.pagination__btn {
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    background-color:  #fff700;
+}

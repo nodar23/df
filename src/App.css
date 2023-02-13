@@ -146,12 +146,20 @@ header h1 {
     font-weight: 400;
 }
 
+.header__text {
+    color: #11606a;
+    padding: 0px 100px 0px 100px;
+    text-align: center;
+}
+
 .profile {
     padding: 0px 100px 0px 100px;
+    /* text-align: center; */
 }
 
 .profile__title {
     font-weight: 400;
+    padding-bottom: 25px;
 }
 
 .profile__btn {
@@ -242,3 +250,29 @@ header h1 {
 .footer__column-four-telegram:hover {
     scale: 1.05;
 }
+
+.catalog, .catalog-empty {
+    padding: 0px 100px 0px 100px;
+}
+
+.catalog__btn {
+    text-decoration: none;
+    border: solid 0px #000000;
+    border-radius: 10px;
+    color: #000000 ;
+    font-weight: 400;
+    background-color: #fff700;
+    padding: 8px 15px 8px 15px;
+}
+
+.catalog__btn:hover {
+    text-shadow: 0.3px 0 0 #000000;
+    cursor: pointer;
+}
+
+.catalog__title {
+    text-align: center;
+    font-weight: 400;
+    padding: 10px 0px 10px 0px;
+}
+

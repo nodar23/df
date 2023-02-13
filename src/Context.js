@@ -9,4 +9,8 @@ export default React.createContext({
     setApi: () => {},
     modalActive: false,
     setModalActive: () => {},
+    goods: [],
+    setGoods: () => {},
+    visibleGoods: [],
+    setVisibleGoods: () => {},
 });

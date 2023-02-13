@@ -27,6 +27,7 @@ const Header = () => {
 
 
 return <header className="header">
+            <p className="header__text">Сайт разработан с ошибками и нарушениями дедлайнов, но зато без потери мотивации и интереса :D</p>
         <div className="header__columns">
 
             <div className="header__column-one">
@@ -55,8 +56,6 @@ return <header className="header">
             </nav>
 
         </div>
-
-            <p className="footer__text">Сайт разработан с ошибками и нарушениями дедлайнов, но зато без потери мотивации и интереса :D</p>
 
         </header>
 }

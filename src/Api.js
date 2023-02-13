@@ -30,6 +30,15 @@ class Api {
             }
         })
     }
+    getProduct(id) {
+        return fetch(`${this.path}/products/${id}`, {
+            headers: {
+                "authorization": `Bearer ${this.token}`
+            }
+        })
+    }
 }
+
+
 
 export { Api };
