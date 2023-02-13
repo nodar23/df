@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 import Profile from "./pages/Profile";
+import Catalog from "./pages/Catalog";
 
 import { Api } from "./Api";
 import Context from "./Context";
@@ -17,7 +18,7 @@ const App = () => {
     if (usr) {
         usr = JSON.parse(usr);
     }
-    const [user, setUser] = useState(usr);
+const [user, setUser] = useState(usr);
 const [token, setToken] = useState(localStorage.getItem("token-9-gr"));
 const [modalActive, setModalActive] = useState(false);
 const [api, setApi] = useState(new Api(token));
@@ -64,6 +65,7 @@ return (
             <main className="py-4">
                 <Routes>
                         <Route path={PATH + "profile"} element={<Profile/>}/>
+                        <Route path={PATH + "catalog"} element={<Catalog/>}/>
                     </Routes>
             </main>
             <Footer />

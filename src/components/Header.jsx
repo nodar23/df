@@ -10,7 +10,7 @@ import SignoutLogo from "./img/signout.svg";
 
 const Header = () => {
 
-    const {user, setUser, setModalActive, PATH, favorites} = useContext(Context);
+    const {user, setUser, setModalActive, PATH} = useContext(Context);
     const SignIn = (el) => {
         el.preventDefault();
         setModalActive(prev => !prev);
@@ -35,7 +35,7 @@ return <header className="header">
             </div>
 
             <div className="header__column-two">
-                <button className="header__column-two-catalog-btn" type="button">≡ Каталог</button>
+               <Link to="/catalog"><button className="header__column-two-catalog-btn" type="button">≡ Каталог</button></Link> 
             </div>
 
             <div className="header__column-three">
@@ -50,7 +50,7 @@ return <header className="header">
                     <img className="header__column-four-signin" src={SigninLogo} alt="signin" />
                     </a>}
                 {user && <a className="header__column-four-link" onClick={signOut}>
-                    <img className="header__column-four-signout" src={SignoutLogo} alt="signin" />
+                    <img className="header__column-four-signout" src={SignoutLogo} alt="signout" />
                     </a>}
             </nav>
 

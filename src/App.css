@@ -31,21 +31,14 @@ html {
 .header__column-one-logo {
     width: 50px;
     height: auto;
-    padding-left: 10px;
-    /* opacity: 0.8; */
+    padding-left: 18px;
 }
 
 .header__column-one-text {
-    margin-top: 2px;
     font-weight: 600;
     font-size: 16px;
-    margin: 0px;
     text-decoration: none;
     color: #000000;
-}
-
-Link {
-    text-decoration: none;
 }
 
 .header__column-two {
