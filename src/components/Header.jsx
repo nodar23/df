@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, {useContext} from "react";
+import {Link} from "react-router-dom";
 import Search from "./Search";
 import Context from "../Context";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import Logo from "./img/logo.svg";
 import SigninLogo from "./img/signin.svg";

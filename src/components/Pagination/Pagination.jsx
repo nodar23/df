@@ -16,10 +16,11 @@ const Pagination = ({hook}) => {
             className="pagination__btn-number" 
             key={p}
             style={{
-                backgroundColor: p === current && " #fff700",
-                color: p === current && "#000000"
+                backgroundColor: p === current && "#000000 ",
+                color: p === current && "#fff700",
+                scale: p === current && "1.1"
             }}
-            onClick={e => {hook.step(p)}}
+            onClick={el => {hook.step(p)}}
         >{p}</button>)}
         <button className="pagination__btn" disabled={current === max} onClick={hook.next}>▶</button>
     </div>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import Card from "../components/Card";
 import {Link} from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ import UsePagination from "../hooks/usePagination";
 
 const Catalog = () => {
     const {visibleGoods, user, PATH} = useContext(Context);
-    const paginate = UsePagination(visibleGoods, 10);
+    const paginate = UsePagination(visibleGoods, 12);
 
     return <>
         {user && <>

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import "./App.css";
 
 import Header from "./components/Header";
@@ -8,7 +8,7 @@ import Modal from "./components/Modal";
 import Profile from "./pages/Profile";
 import Catalog from "./pages/Catalog";
 
-import { Api } from "./Api";
+import {Api} from "./Api";
 import Context from "./Context";
 
 const PATH = "/";

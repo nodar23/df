@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import React, {useContext} from "react";
+import {useNavigate} from "react-router-dom";
 import Context from "../Context";
 
 const Profile = () => {
