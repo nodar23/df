@@ -299,6 +299,12 @@ header h1 {
     text-decoration: none;
 }
 
+.card:hover {
+    scale: 1.03;
+    box-shadow: 0px 0px 10px #222222;
+    transition-duration: 400ms;
+}
+
 .card__btn {
     border: solid 0px #000000;
     border-radius: 10px;
