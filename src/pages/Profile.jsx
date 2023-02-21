@@ -17,7 +17,7 @@ const Profile = () => {
      <div className="profile">
         <h1 className="profile__title">Личный кабинет</h1>
         <p className="profile__welcome-text">Добрый день, {user && user.name}!</p>
-        <p className="profile__text">Электропочта: {user && user.email}!</p>
+        <p className="profile__text">Электропочта: {user && user.email}</p>
         <p className="profile__text">Профессия/деятельность: {user && user.about}</p>
         <p className="profile__text">ID: {user && user._id}</p>
         <span className="profile__avatar"><img  src={user.avatar} alt="avatar" /></span>

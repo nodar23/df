@@ -3,6 +3,7 @@ import {Routes, Route} from "react-router-dom";
 import "./App.css";
 
 import Header from "./components/Header";
+import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 import Profile from "./pages/Profile";
@@ -73,8 +74,9 @@ return (
     }}>
         <div className="wrapper">
             <Header />
-            <main className="py-4">
+            <main>
                 <Routes>
+                        <Route path={PATH} element={<Main/>}/>
                         <Route path={PATH + "profile"} element={<Profile/>}/>
                         <Route path={PATH + "catalog"} element={<Catalog/>}/>
                     </Routes>
