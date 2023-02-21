@@ -11,7 +11,7 @@ import Catalog from "./pages/Catalog";
 import {Api} from "./Api";
 import Context from "./Context";
 
-const PATH = "/";
+const PATH = "";
 
 const App = () => {
     let usr = localStorage.getItem("user-9-gr");

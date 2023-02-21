@@ -16,8 +16,6 @@ const Signin = ({change, close}) => {
             api.signIn(body)
                 .then(res => res.json())
                 .then(data => {
-                    // Не забыть отловить сообщение с ошибкой
-                    console.log(data);
                     localStorage.setItem("user-9-gr", JSON.stringify(data.data));
                     localStorage.setItem("token-9-gr", data.token);
                     setToken(data.token);

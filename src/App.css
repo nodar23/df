@@ -162,6 +162,33 @@ header h1 {
     padding-bottom: 25px;
 }
 
+.profile__welcome-text {
+    font-weight: 400;
+}
+
+.profile__text {
+    font-size: 14px;
+    font-style: oblique;
+}
+
+.profile__avatar {
+    display: inline-block;
+    overflow: hidden;
+    width: 33%;
+    padding-top: 2em;
+    padding-bottom: 10em;
+    height: 0;
+    position: relative;
+}
+
+.profile__avatar img {
+  width: 8em;
+  height: auto;
+  position: absolute;
+  clip-path: circle(50%);
+  object-fit: cover;
+}
+
 .profile__btn {
     border: solid 0px #000000;
     border-radius: 10px;

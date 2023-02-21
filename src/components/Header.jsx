@@ -22,7 +22,7 @@ const Header = () => {
         el.preventDefault();
         localStorage.removeItem("user-9-gr");
         setUser("");
-        navigate("/");
+        navigate("");
     }
 
 
@@ -41,11 +41,9 @@ return <header className="header">
 
             <div className="header__column-three">
                 <Search />
-                {/* <input type="search" placeholder="Поиск..." className="search"/> */}
             </div>
             
             <nav className="header__column-four-menu">
-                {/* true && true */}
                 {user && user.name && <Link className="header__column-four-link" to={PATH + "profile"}>{user.name}</Link>}
                 {!user && <a className="header__column-four-link" onClick={SignIn}>
                     <img className="header__column-four-signin" src={SigninLogo} alt="signin" />
