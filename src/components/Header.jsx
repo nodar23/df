@@ -1,8 +1,8 @@
-import React, {useContext} from "react";
-import {Link} from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import Search from "./Search";
 import Context from "../Context";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Logo from "./img/logo.svg";
 import SigninLogo from "./img/signin.svg";
@@ -11,15 +11,15 @@ import SignoutLogo from "./img/signout.svg";
 const Header = () => {
 
     const {user, setUser, setModalActive, PATH} = useContext(Context);
-    const SignIn = (el) => {
-        el.preventDefault();
+    const SignIn = (e) => {
+        e.preventDefault();
         setModalActive(prev => !prev);
     }
 
     const navigate = useNavigate();
 
-    const signOut = (el) => {
-        el.preventDefault();
+    const signOut = (e) => {
+        e.preventDefault();
         localStorage.removeItem("user-9-gr");
         setUser("");
         navigate("");
@@ -45,12 +45,12 @@ return <header className="header">
             
             <nav className="header__column-four-menu">
                 {user && user.name && <Link className="header__column-four-link" to={PATH + "profile"}>{user.name}</Link>}
-                {!user && <a className="header__column-four-link" onClick={SignIn}>
+                {!user && <span className="header__column-four-link" onClick={SignIn}>
                     <img className="header__column-four-signin" src={SigninLogo} alt="signin" />
-                    </a>}
-                {user && <a className="header__column-four-link" onClick={signOut}>
+                    </span>}
+                {user && <span className="header__column-four-link" onClick={signOut}>
                     <img className="header__column-four-signout" src={SignoutLogo} alt="signout" />
-                    </a>}
+                    </span>}
             </nav>
 
         </div>

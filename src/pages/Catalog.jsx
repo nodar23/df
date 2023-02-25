@@ -18,8 +18,8 @@ const Catalog = () => {
                     <h1 className="catalog__title">Каталог товаров</h1>
                     <Pagination hook={paginate}/>
                     <div className="catalog">
-                        {paginate.setPageData().map((el, i) => <Link to={`/catalog/${el._id}`} key={el._id}>
-                        <Card key={"card_" + i} {...el}/>
+                        {paginate.setPageData().map((e, i) => <Link to={`/catalog/${e._id}`} key={e._id}>
+                        <Card key={"card_" + i} {...e}/>
                         </Link>)}
                     </div>
                 </>

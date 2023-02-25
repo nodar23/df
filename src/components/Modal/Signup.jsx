@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import Context from "../../Context";
 
 const Signup = ({change, close}) => {
@@ -19,8 +19,8 @@ const Signup = ({change, close}) => {
         }
     }
 
-    const sendForm = (el) => {
-        el.preventDefault();
+    const sendForm = (e) => {
+        e.preventDefault();
         const body = {
             email: inp1,
             password: inp2
@@ -55,19 +55,19 @@ const Signup = ({change, close}) => {
             placeholder="Электропочта" 
             value={inp1} 
             required
-            onChange={(el) => {setInp1(el.target.value)}}
+            onChange={(e) => {setInp1(e.target.value)}}
         />
         <input 
             type="password" 
             placeholder="Пароль" 
             value={inp2} 
-            onChange={(el) => {checkPwd(el.target.value)}}
+            onChange={(e) => {checkPwd(e.target.value)}}
         />
         <input 
             type="password" 
             placeholder="Еще пароль" 
             value={inp3} 
-            onChange={(el) => {checkPwd(el.target.value, "check")}}
+            onChange={(e) => {checkPwd(e.target.value, "check")}}
         />
         <button className="modal__form-btn" type="submit" disabled={testPwd}>Зарегистрироваться</button>
         <button className="modal__form-btn link" type="button" onClick={() => {change(prev => !prev)}}>Войти</button>

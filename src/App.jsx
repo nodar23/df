@@ -1,16 +1,20 @@
-import React, {useState, useEffect} from "react";
-import {Routes, Route} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Api } from "./api";
+import Context from "./Context";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./App.css";
 
 import Header from "./components/Header";
-import Main from "./components/Main";
+import Main from "./pages/Main";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 import Profile from "./pages/Profile";
 import Catalog from "./pages/Catalog";
 
-import {Api} from "./Api";
-import Context from "./Context";
+
+
+const queryClient = new QueryClient();
 
 const PATH = "";
 
@@ -54,24 +58,25 @@ useEffect(() => {
     }
 }, [user])
 
+const contextValue = {
+    user,
+    token,
+    api,
+    modalActive,
+    goods,
+    visibleGoods,
+    setUser,
+    setToken,
+    setApi,
+    setModalActive,
+    setGoods,
+    setVisibleGoods,
+    PATH: PATH
+}
 
 return (
-    <Context.Provider value={{
-        user: user,
-            token: token,
-            api: api,
-            modalActive: modalActive,
-            goods: goods,
-            visibleGoods: visibleGoods,
-            setUser: setUser,
-            setToken: setToken,
-            setApi: setApi,
-            setModalActive: setModalActive,
-            setGoods: setGoods,
-            setVisibleGoods: setVisibleGoods,
-            setVisibleGoods,
-            PATH: PATH
-    }}>
+    <QueryClientProvider client={queryClient}>
+    <Context.Provider value={contextValue}>
         <div className="wrapper">
             <Header />
             <main>
@@ -85,6 +90,7 @@ return (
         </div>
         <Modal />
     </Context.Provider>
+    </QueryClientProvider>
 )
 }
 

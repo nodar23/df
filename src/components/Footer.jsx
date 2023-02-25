@@ -56,8 +56,8 @@ const Footer = () => {
             <div className="footer__column-four">
                 <div className="footer__column-four-title">Мы на связи:</div>
                 <div className="footer__column-four-phone"> <a href="">8(999)***-**-**</a></div>
-                <div><a className="footer__column-four-mail"href="">sitiy**pes@yandex.ru</a></div>
-                <div><a href=""><img className="footer__column-four-telegram" src={Telegram} alt="telegram" /></a></div>
+                <div><span className="footer__column-four-mail">sitiy**pes@yandex.ru</span></div>
+                <div><img className="footer__column-four-telegram" src={Telegram} alt="telegram"/></div>
             </div>
 
         </div>

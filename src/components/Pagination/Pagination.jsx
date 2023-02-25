@@ -12,16 +12,16 @@ const Pagination = ({hook}) => {
     
     return <div className="pagination">
         <button className="pagination__btn" disabled={current === 1} onClick={hook.previous}>◀</button>
-        {pages.map(p => <button 
+        {pages.map(page => <button 
             className="pagination__btn-number" 
-            key={p}
+            key={page}
             style={{
-                backgroundColor: p === current && "#000000 ",
-                color: p === current && "#fff700",
-                scale: p === current && "1.1"
+                backgroundColor: page === current && "#000000 ",
+                color: page === current && "#fff700",
+                scale: page === current && "1.1"
             }}
-            onClick={el => {hook.step(p)}}
-        >{p}</button>)}
+            onClick={e => {hook.step(page)}}
+        >{page}</button>)}
         <button className="pagination__btn" disabled={current === max} onClick={hook.next}>▶</button>
     </div>
 }

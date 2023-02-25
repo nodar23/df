@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import Context from "../../Context";
 
 const Signin = ({change, close}) => {
@@ -7,8 +7,8 @@ const Signin = ({change, close}) => {
     
         const {setToken, api} = useContext(Context);
     
-        const sendForm = (el) => {
-            el.preventDefault();
+        const sendForm = (e) => {
+            e.preventDefault();
             const body = {
                 email: inp1,
                 password: inp2
@@ -31,13 +31,13 @@ const Signin = ({change, close}) => {
                 placeholder="Электропочта" 
                 value={inp1} 
                 required
-                onChange={(el) => {setInp1(el.target.value)}}
+                onChange={(e) => {setInp1(e.target.value)}}
             />
             <input 
                 type="password" 
                 placeholder="Пароль" 
                 value={inp2} 
-                onChange={(el) => {setInp2(el.target.value)}}
+                onChange={(e) => {setInp2(e.target.value)}}
             />
             <button className="modal__form-btn" type="submit">Войти</button>
             <button className="modal__form-btn link" type="button" onClick={() => {change(prev => !prev)}}>Зарегистрироваться</button>

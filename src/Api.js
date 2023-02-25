@@ -37,8 +37,31 @@ class Api {
             }
         })
     }
+    getMe = async () => {
+        const response = await fetch('https://api.react-learning.ru/v2/9-gr/users/me',
+            {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                }
+            });
+    
+    
+        if (response.ok == false) {
+    
+            const res = await response.json();
+            throw new Error(res.message);
+        }
+    
+        let user = await response.json();
+        return user;
+    }
 }
 
 
 
 export { Api };
+
+

@@ -1,13 +1,14 @@
-import React, {useContext} from "react";
-import {useNavigate} from "react-router-dom";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import Context from "../Context";
+import { useQuery } from "@tanstack/react-query";
 
 const Profile = () => {
     const {user, setUser} = useContext(Context);
     const navigate = useNavigate();
 
-    const logOut = (el) => {
-        el.preventDefault();
+    const logOut = (e) => {
+        e.preventDefault();
         setUser(null);
         localStorage.removeItem("user-9-gr");
         navigate("");
