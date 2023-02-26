@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "./img/logo.svg";
 import SigninLogo from "./img/signin.svg";
 import SignoutLogo from "./img/signout.svg";
+import AuthUser from "./img/authuser.svg";
 
 const Header = () => {
 
@@ -44,7 +45,9 @@ return <header className="header">
             </div>
             
             <nav className="header__column-four-menu">
-                {user && user.name && <Link className="header__column-four-link" to={PATH + "profile"}>{user.name}</Link>}
+                {user && user.name && <Link className="header__column-four-link" to={PATH + "profile"}>
+                    <img className="header__column-four-authuser" src={AuthUser} alt="authuser" />
+                </Link>}
                 {!user && <span className="header__column-four-link" onClick={SignIn}>
                     <img className="header__column-four-signin" src={SigninLogo} alt="signin" />
                     </span>}

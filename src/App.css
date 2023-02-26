@@ -130,13 +130,15 @@ html {
 }
 
 .header__column-four-signin,
-.header__column-four-signout {
-    width: 35px;
+.header__column-four-signout,
+.header__column-four-authuser {
+    width: 50px;
     height: auto;
 }
 
 .header__column-four-signin:hover, 
-.header__column-four-signout:hover {
+.header__column-four-signout:hover,
+.header__column-four-authuser:hover {
     scale: 1.1;
 }
 
