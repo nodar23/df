@@ -1,31 +1,22 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import Context from "../Context";
-import { useQuery } from "@tanstack/react-query";
+import { useSelector } from "react-redux";
+import { getUserInfoSelector } from "../reduxjs_toolkit/slices/userInfoSlice";
+
 
 const Profile = () => {
-    const {user, setUser} = useContext(Context);
-    const navigate = useNavigate();
+    const user = useSelector(getUserInfoSelector)
 
-    const logOut = (e) => {
-        e.preventDefault();
-        setUser(null);
-        localStorage.removeItem("user-9-gr");
-        navigate("");
-    }
-
-    return <>
-     <div className="profile">
-        <h1 className="profile__title">Личный кабинет</h1>
-        <p className="profile__welcome-text">Добрый день, {user && user.name}!</p>
-        <p className="profile__text">Электропочта: {user && user.email}</p>
-        <p className="profile__text">Профессия/деятельность: {user && user.about}</p>
-        <p className="profile__text">ID: {user && user._id}</p>
-        <span className="profile__avatar"><img  src={user.avatar} alt="avatar" /></span>
-        <p><button className="profile__btn" onClick={logOut}>Выйти из аккаунта</button></p>
-     </div>
-    </>
-}
+    return (
+          <div className="profile">
+            <h2 className="profile__title">Личный кабинет</h2>
+            <p className="profile__welcome-text">Добрый день, {user.name}!</p>
+            <p className="profile__text">Группа: {user.group}</p>
+            <p className="profile__text">Электропочта: {user.email}</p>
+            <p className="profile__text">Профессия/деятельность: {user.about}</p>
+            {/* <p className="profile__text">Токен: {user.token}</p> */}
+            <span className="profile__avatar"><img  src={user.avatar} alt="avatar" /></span>
+          </div>
+    )
+  }
 
 
 export default Profile;

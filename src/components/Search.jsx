@@ -1,23 +1,41 @@
-import React, { useState, useEffect } from "react";
-import { useDebounce } from "../hooks/useDebounce";
+import React from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import Context from "../Context";
-import { changeSearchFilter } from "../reduxjs_toolkit/slices/searchSlice";
+import { changeSearchFilter } from "../reduxjs_toolkit/slices/filterSlice";
+import { useDebounce } from "../hooks/useDebounce";
 
 
 const Search = () => {
 
-
-
-
+    const [searchParams, setSearchParams] = useSearchParams()
+    const [search, setSearch] = useState(() => {
+      const searchValueFromQuery = searchParams.get('q')
+      return searchValueFromQuery ?? ''
+    })
   
-
-
-    return <div className="header__column-three-search">
-    <input className="header__column-three-search-input" type="text" placeholder="Искать товары"/>
-    <button className="header__column-three-search-btn">Найти</button>
-</div>
+    const dispatch = useDispatch()
+  
+    const debouncedSearchValue = useDebounce(search)
+  
+    const changeSearchHandler = (ev) => {
+      const newSearchValue = ev.target.value
+      setSearch(newSearchValue)
+      setSearchParams({
+        ...Object.fromEntries(searchParams.entries()),
+        q: newSearchValue,
+      })
+    }
+  
+    useEffect(() => {
+      dispatch(changeSearchFilter(debouncedSearchValue))
+    }, [debouncedSearchValue, dispatch])
+  
+    return (
+      <div className="catalog__search">
+        <input className="catalog__search-input" type="text" placeholder="Искать товары" value={search} onChange={changeSearchHandler} />
+      </div>
+    )
 }
 
 
