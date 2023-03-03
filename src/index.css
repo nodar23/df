@@ -53,14 +53,14 @@ html {
     background-color: #ffffff;
     padding: 8px 15px 8px 15px;
     margin-left: 15px;
-    border: 0px solid #000000;
+    border: 2px solid #000000;
 }
 
 .header__column-two-catalog-btn:hover {
     color: #000000;
     text-shadow: 0.5px 0 0 #000000;
     cursor: pointer;
-    border: 0px solid #000000;
+    border: 2.5px solid #000000;
 }
 
 .header__column-three {
@@ -293,6 +293,7 @@ header h1 {
 
 .signup__title,
 .signin__title {
+    font-size: 24px;
     font-weight: 400;
     padding-bottom: 25px;
     text-align: center;
@@ -300,6 +301,23 @@ header h1 {
 
 .signin__link-to-signup,
 .signup__link-to-signin {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    color: #000000;
+    display: inline;
+    border-bottom: 1px solid #000000;
+}
+
+.signin__link-to-signup:hover,
+.signup__link-to-signin:hover {
+    text-shadow: 0.5px 0 0 #565656;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.signin__link,
+.signup__link {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
@@ -335,7 +353,6 @@ header h1 {
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
     justify-content: center;
-
 }
 
 .catalog__no-auth,
@@ -360,13 +377,13 @@ header h1 {
 }
 
 .catalog__search {
-    padding-bottom: 2em;
+    /* padding-bottom: 2em; */
     justify-self: center;
 }
 
 .catalog__search-input {
     width: 20rem;
-    height: calc(2.25rem + 2px);
+    height: 2rem;
     color: #000000;
     background-color: #ffffff;
     border: 2px solid #000000;
@@ -375,6 +392,15 @@ header h1 {
 
 .catalog__search-input:hover {
     border: 2px solid #000000;
+}
+
+.catalog__pagination {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+
 }
 
 .product {

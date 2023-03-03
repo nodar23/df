@@ -7,6 +7,7 @@ import { withQuery } from "../components/withQuery";
 
 
 const Product = ({name, pictures, price, wight}) => {
+  
 
   return (
     <>

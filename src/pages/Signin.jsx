@@ -63,9 +63,9 @@ const Signin = () => {
         {error.message}
       </p>
       )}
-      <div className="signin__link-to-signup">
+      <div className="signin__link">
         <span>или </span> 
-        <Link to="/signup">Зарегистрироваться</Link>
+        <Link className="signin__link-to-signup" to="/signup">Зарегистрироваться</Link>
       </div>
     </Form>
   </Formik>

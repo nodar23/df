@@ -5,9 +5,16 @@ import Search from "../components/Search";
 import { getUserInfoSelector } from "../reduxjs_toolkit/slices/userInfoSlice";
 // import Pagination from "../components/Pagination/Pagination";
 // import UsePagination from "../hooks/usePagination";
+import { Pagination } from "@mui/material";
+// import { getSearchSelector } from "../reduxjs_toolkit/slices/filterSlice";
+// import { useEffect, useState } from "react";
+// import { useNavigate, useSearchParams } from "react-router-dom";
+// import { useQuery } from "@tanstack/react-query";
+
 
 
 const Catalog = () => {
+ 
     const { token } = useSelector(getUserInfoSelector);
 
   if (token) {
@@ -15,13 +22,25 @@ const Catalog = () => {
     return (
       <>
       <div className="catalog">
+
         <div className="catalog__title">
+
         <h2>Каталог товаров</h2>
         <Search />
         </div>
+
+        <div className="catalog__pagination">
+        <Pagination count={10} showFirstButton showLastButton />
+        </div>
+
         <div className="catalog__products">
           <Products />
         </div>
+
+        <div className="catalog__pagination">
+
+        </div>
+
       </div>
       </>
     )

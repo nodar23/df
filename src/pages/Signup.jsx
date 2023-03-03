@@ -55,9 +55,9 @@ const Signup = () => {
           <ErrorMessage className="signup__error" component="p" name="group" />
         </div>
         <button className="signup__btn" disabled={isLoading} type="submit">Зарегистрироваться</button>
-         <div className="signup__link-to-signin">
-            <span>или</span> 
-            <Link to="/signin">Войти</Link>
+         <div className="signup__link">
+            <span>или </span> 
+            <Link className="signup__link-to-signin" to="/signin">Войти</Link>
         </div>
         <div></div>
         {isError && (
