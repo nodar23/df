@@ -31,7 +31,9 @@ const userInfoSlice = createSlice({
 })
 
 
-export const { setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, resetUserInfo, setUserAbout,
+export const  { setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, resetUserInfo, setUserAbout,
 } = userInfoSlice.actions;
 export const getUserInfoSelector = (state) => state.user;
 export const userInfoReducer = userInfoSlice.reducer;
+
+

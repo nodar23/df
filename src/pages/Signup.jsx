@@ -11,7 +11,7 @@ const initialValues = {
   password: '',
 }
 
-const Signup = () => {
+export const Signup = () => {
   const navigate = useNavigate();
 
   const {
@@ -69,6 +69,3 @@ const Signup = () => {
     </Formik>
   )
 }
-
-
-export default Signup;

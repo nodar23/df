@@ -45,7 +45,7 @@ const ProductsInner = ({ products }) => {
 
 const ProductsInnerWithQuery = withQuery(ProductsInner);
 
-const Products = () => {
+export const Products = () => {
   const { token } = useSelector(getUserInfoSelector)
   const search = useSelector(getSearchSelector)
   const { data: products, isLoading } = useQuery({
@@ -56,6 +56,3 @@ const Products = () => {
 
   return <ProductsInnerWithQuery products={products} isLoading={isLoading} />
 };
-
-
-export default Products;

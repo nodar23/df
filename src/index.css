@@ -111,7 +111,7 @@ header h1 {
 }
 
 .main {
-    padding-top: 400px;
+    min-height: calc(100vh - 395px);
 }
 
 .main__text {
@@ -177,7 +177,7 @@ header h1 {
     align-items: center;
     justify-items: center;
     text-align: center;
-    padding: 10px 100px 70px 100px;
+    padding: 10px 100px 10px 100px;
     border-radius: 20px;
     border: solid 0px #fff700;
     font-size: 14px;
@@ -273,6 +273,15 @@ header h1 {
     display: grid;
     gap: 0.5em;
     justify-content: center;
+    min-height: calc(100vh - 400px);
+}
+
+.signin {
+    min-height: calc(100vh - 380px);
+}
+
+.signup {
+    min-height: calc(100vh - 400px);
 }
 
 .signin__input,

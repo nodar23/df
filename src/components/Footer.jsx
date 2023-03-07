@@ -4,7 +4,7 @@ import Logo from "./img/logo.svg";
 import Telegram from "./img/telegram.svg"
 
 
-const Footer = () => {
+export const Footer = () => {
 
     return <footer className="footer">
 
@@ -64,6 +64,3 @@ const Footer = () => {
 
     </footer>
 }
-
-
-export default Footer;

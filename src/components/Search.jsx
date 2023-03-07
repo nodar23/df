@@ -6,7 +6,7 @@ import { changeSearchFilter } from "../reduxjs_toolkit/slices/filterSlice";
 import { useDebounce } from "../hooks/useDebounce";
 
 
-const Search = () => {
+export const Search = () => {
 
     const [searchParams, setSearchParams] = useSearchParams()
     const [search, setSearch] = useState(() => {
@@ -37,7 +37,4 @@ const Search = () => {
       </div>
     )
 }
-
-
-export default Search;
 

@@ -1,19 +1,19 @@
 import React from "react";
-import App from "./App";
+import { App } from "./App";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 
-import Main from "./pages/Main";
-import Signup from "./pages/Signup";
-import Signin from "./pages/Signin";
-import Catalog from "./pages/Catalog";
-import Profile from "./pages/Profile";
-import ProductsPage from "./pages/ProductsPage";
-import Cart from "./pages/Cart";
-import Favorites from "./pages/Favorites";
+import { Main } from "./pages/Main";
+import { Signup } from "./pages/Signup";
+import { Signin } from "./pages/Signin";
+import { Catalog } from "./pages/Catalog";
+import { Profile } from "./pages/Profile";
+import { ProductsPage } from "./pages/ProductsPage";
+import { Cart } from "./pages/Cart";
+import { Favorites } from "./pages/Favorites";
 import store from "./reduxjs_toolkit/store";
 
 import "./index.css";
@@ -52,7 +52,7 @@ const router = createBrowserRouter(
           element: <Catalog />,
         },
         {
-          path: 'product',
+          path: 'product_page',
           element: <ProductsPage />,
         },
         {

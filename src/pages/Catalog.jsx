@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Products from "./Products";
-import Search from "../components/Search";
+import { Products } from "./Products";
+import { Search } from "../components/Search";
 import { getUserInfoSelector } from "../reduxjs_toolkit/slices/userInfoSlice";
 // import Pagination from "../components/Pagination/Pagination";
 // import UsePagination from "../hooks/usePagination";
@@ -10,10 +10,11 @@ import { Pagination } from "@mui/material";
 // import { useEffect, useState } from "react";
 // import { useNavigate, useSearchParams } from "react-router-dom";
 // import { useQuery } from "@tanstack/react-query";
+import ProductsPage from "./ProductsPage";
 
 
 
-const Catalog = () => {
+export const Catalog = () => {
  
     const { token } = useSelector(getUserInfoSelector);
 
@@ -61,6 +62,3 @@ const Catalog = () => {
     )
   }
 }
-
-
-export default Catalog;
