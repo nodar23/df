@@ -2,8 +2,8 @@
 import { useMutation } from "@tanstack/react-query";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, useNavigate } from "react-router-dom";
-import { validatorSignInUp } from "../yup/validatorSignInUp";
-import { api } from "../api";
+import { validatorSignUp } from "./validatorSignUp";
+import { api } from "../../api";
 
 const initialValues = {
   email: '',
@@ -28,7 +28,7 @@ export const Signup = () => {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={validatorSignInUp}
+      validationSchema={validatorSignUp}
       onSubmit={SubmitHandler}
     >
       <Form className="signup">

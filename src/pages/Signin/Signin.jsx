@@ -2,9 +2,9 @@ import { useMutation } from "@tanstack/react-query";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-// import { validatorSignInUp } from "../yup/validatorSignInUp";  //почему-то валидатор именно на авторизации мне все ломает
-import { api } from "../api";
-import { setUserAbout, setUserAvatar, setUserEmail, setUserGroup, setUserName, setUserToken } from "../reduxjs_toolkit/slices/userInfoSlice";
+import { validatorSignIn } from "./validatorSignIn";
+import { api } from "../../api";
+import { setUserAbout, setUserAvatar, setUserEmail, setUserGroup, setUserName, setUserToken } from "../../reduxjs_toolkit/slices/userInfoSlice";
 
 const initialValues = {
   email: '',
@@ -38,7 +38,7 @@ export const Signin = () => {
     return ( 
     <Formik
     initialValues={initialValues}
-    // validationSchema={validatorSignInUp}
+    validationSchema={validatorSignIn}
     onSubmit={submitHandler}
   >
     <Form className="signin">

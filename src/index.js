@@ -7,8 +7,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 
 import { Main } from "./pages/Main";
-import { Signup } from "./pages/Signup";
-import { Signin } from "./pages/Signin";
+import { Signup } from "./pages/Signup/Signup";
+import { Signin } from "./pages/Signin/Signin";
 import { Catalog } from "./pages/Catalog";
 import { Profile } from "./pages/Profile";
 import { ProductsPage } from "./pages/ProductsPage";
