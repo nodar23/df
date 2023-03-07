@@ -3,15 +3,7 @@ import { Link } from "react-router-dom";
 import { Products } from "./Products";
 import { Search } from "../components/Search";
 import { getUserInfoSelector } from "../reduxjs_toolkit/slices/userInfoSlice";
-// import Pagination from "../components/Pagination/Pagination";
-// import UsePagination from "../hooks/usePagination";
-import { Pagination } from "@mui/material";
-// import { getSearchSelector } from "../reduxjs_toolkit/slices/filterSlice";
-// import { useEffect, useState } from "react";
-// import { useNavigate, useSearchParams } from "react-router-dom";
-// import { useQuery } from "@tanstack/react-query";
 import ProductsPage from "./ProductsPage";
-
 
 
 export const Catalog = () => {
@@ -28,10 +20,6 @@ export const Catalog = () => {
 
         <h2>Каталог товаров</h2>
         <Search />
-        </div>
-
-        <div className="catalog__pagination">
-        <Pagination count={10} showFirstButton showLastButton />
         </div>
 
         <div className="catalog__products">

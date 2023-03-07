@@ -111,11 +111,16 @@ header h1 {
 }
 
 .main {
-    min-height: calc(100vh - 395px);
+    display: grid;
+    min-height: calc(100vh - 380px);
+    justify-content: center;
+    align-items: center;
 }
 
-.main__text {
+.main__title {
     text-align: center;
+    font-weight: 200;
+    font-size: 48px;
 }
 
 .profile {
@@ -273,7 +278,6 @@ header h1 {
     display: grid;
     gap: 0.5em;
     justify-content: center;
-    min-height: calc(100vh - 400px);
 }
 
 .signin {
@@ -403,7 +407,7 @@ header h1 {
 }
 
 .catalog__search {
-    /* padding-bottom: 2em; */
+    padding-bottom: 1em;
     justify-self: center;
 }
 
@@ -426,7 +430,6 @@ header h1 {
     align-items: center;
     padding-bottom: 1em;
     padding-top: 1em;
-
 }
 
 .product {
