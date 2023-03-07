@@ -5,13 +5,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { validatorSignUp } from "./validatorSignUp";
 import { api } from "../../api";
 
-const initialValues = {
-  email: '',
-  group: '9-gr',
-  password: '',
-}
-
 export const Signup = () => {
+  const initialValues = {
+    email: '',
+    group: '9-gr',
+    password: '',
+  }
+  
   const navigate = useNavigate();
 
   const {
@@ -20,7 +20,7 @@ export const Signup = () => {
     mutationFn: (values) => api.signUp(values),
   });
 
-  const SubmitHandler = async (values) => {
+  const submitHandler = async (values) => {
     await mutateAsync(values)
     navigate('/signin')
   };
@@ -29,7 +29,7 @@ export const Signup = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={validatorSignUp}
-      onSubmit={SubmitHandler}
+      onSubmit={submitHandler}
     >
       <Form className="signup">
         <p className="signup__title">Регистрация</p>

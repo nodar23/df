@@ -2,13 +2,10 @@ import React from "react";
 import { Link }  from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
-import Search from "./Search";
-import { getUserInfoSelector, resetUserInfo } from "../reduxjs_toolkit/slices/userInfoSlice";
-
-import Logo from "./img/logo.svg";
-import SigninLogo from "./img/signin.svg";
-import AuthUserLogo from "./img/authuser.svg";
+import { getUserInfoSelector, resetUserInfo } from "../redux/slices/userInfoSlice";
+import Logo from "../assets/img/logo.svg";
+import SigninLogo from "../assets/img/signin.svg";
+import AuthUserLogo from "../assets/img/authuser.svg";
 
 
 

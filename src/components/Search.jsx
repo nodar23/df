@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { changeSearchFilter } from "../reduxjs_toolkit/slices/filterSlice";
+import { changeSearchFilter } from "../redux/slices/filterSlice";
 import { useDebounce } from "../hooks/useDebounce";
 
 

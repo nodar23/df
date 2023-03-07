@@ -1,8 +1,6 @@
 import React from "react";
-
-import Logo from "./img/logo.svg";
-import Telegram from "./img/telegram.svg"
-
+import Logo from "../assets/img/logo.svg";
+import Telegram from "../assets/img/telegram.svg"
 
 export const Footer = () => {
 

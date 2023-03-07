@@ -1,4 +1,4 @@
-import { LS_KEY } from "./ls_key";
+import { LS_KEY } from "./constants";
 
 
 export const initState = {

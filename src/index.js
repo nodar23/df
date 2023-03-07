@@ -14,7 +14,7 @@ import { Profile } from "./pages/Profile";
 import { ProductsPage } from "./pages/ProductsPage";
 import { Cart } from "./pages/Cart";
 import { Favorites } from "./pages/Favorites";
-import store from "./reduxjs_toolkit/store";
+import store from "./redux/store";
 
 import "./index.css";
 

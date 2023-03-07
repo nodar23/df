@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { getInitState } from "./initState";
 import { filterReducer } from "./slices/filterSlice";
 import { userInfoReducer } from "./slices/userInfoSlice";
-import { LS_KEY } from "./ls_key";
+import { LS_KEY } from "./constants";
 
 
 const store = configureStore({

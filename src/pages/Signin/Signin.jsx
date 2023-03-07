@@ -4,23 +4,27 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { validatorSignIn } from "./validatorSignIn";
 import { api } from "../../api";
-import { setUserAbout, setUserAvatar, setUserEmail, setUserGroup, setUserName, setUserToken } from "../../reduxjs_toolkit/slices/userInfoSlice";
-
-const initialValues = {
-  email: '',
-  password: '',
-}
+import { setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, setUserAbout } from "../../redux/slices/userInfoSlice";
 
 export const Signin = () => {
-    const navigate = useNavigate();
+  const initialValues = {
+    email: '',
+    password: '',
+  }
 
-    const dispatch = useDispatch();
-
-    const {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  
+  const {
       mutateAsync, isLoading, isError, error,
     } = useMutation({
       mutationFn: (values) => api.signIn(values)
         .then((res) => {
+          // const dispatchingData = {
+          //   ...res.data,
+          //   token: res.token
+          // }
+          // dispatch(setUserData(dispatchingData))
           dispatch(setUserToken(res.token))
           dispatch(setUserName(res.data.name))
           dispatch(setUserEmail(res.data.email))

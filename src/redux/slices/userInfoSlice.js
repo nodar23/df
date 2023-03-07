@@ -6,6 +6,9 @@ const userInfoSlice = createSlice({
   name: 'user-9-gr',
   initialState: initState.user,
   reducers: {
+    // setUserData(state, action) {
+    //   state = action.payload
+    // },
     setUserToken(state, action) {
       state.token = action.payload
     },
@@ -31,7 +34,7 @@ const userInfoSlice = createSlice({
 })
 
 
-export const  { setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, resetUserInfo, setUserAbout,
+export const  { setUserData, setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, resetUserInfo, setUserAbout,
 } = userInfoSlice.actions;
 export const getUserInfoSelector = (state) => state.user;
 export const userInfoReducer = userInfoSlice.reducer;
