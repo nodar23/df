@@ -4,7 +4,6 @@ import { getUserInfoSelector } from "../src/reduxjs_toolkit/slices/userInfoSlice
 import { useSelector } from "react-redux";
 import { Outlet, useLocation, Navigate } from "react-router-dom";
 
-
 export const App = () => {
   const { token } = useSelector(getUserInfoSelector);
   const location = useLocation();
