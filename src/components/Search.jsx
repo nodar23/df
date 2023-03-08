@@ -5,9 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { changeSearchFilter } from "../redux/slices/filterSlice";
 import { useDebounce } from "../hooks/useDebounce";
 
-
 export const Search = () => {
-
     const [searchParams, setSearchParams] = useSearchParams()
     const [search, setSearch] = useState(() => {
       const searchValueFromQuery = searchParams.get('q')
@@ -15,7 +13,6 @@ export const Search = () => {
     })
   
     const dispatch = useDispatch()
-  
     const debouncedSearchValue = useDebounce(search)
   
     const changeSearchHandler = (ev) => {

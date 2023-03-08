@@ -125,6 +125,7 @@ header h1 {
 
 .profile {
     padding: 0px 100px 0px 100px;
+    text-align: center;
 }
 
 .profile__title {
@@ -146,18 +147,14 @@ header h1 {
 .profile__avatar {
     display: inline-block;
     width: 33%;
-    padding-top: 2em;
-    padding-bottom: 10em;
-    height: 0;
-    position: relative;
+    height: auto;
 }
 
 .profile__avatar img {
-  width: 8em;
-  height: auto;
-  position: absolute;
-  clip-path: circle(50%);
-  object-fit: cover;
+    width: 8em;
+    height: auto;
+    clip-path: circle(50%);
+    object-fit: cover;
 }
 
 .profile__btn {
