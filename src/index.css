@@ -104,12 +104,6 @@ header h1 {
     font-weight: 400;
 }
 
-.header__text {
-    color: #11606a;
-    padding: 0px 100px 0px 100px;
-    text-align: center;
-}
-
 .main {
     display: grid;
     min-height: calc(100vh - 380px);

@@ -7,8 +7,6 @@ import Logo from "../assets/img/logo.svg";
 import SigninLogo from "../assets/img/signin.svg";
 import AuthUserLogo from "../assets/img/authuser.svg";
 
-
-
 export const Header = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -30,10 +28,6 @@ export const Header = () => {
 
             <div className="header__column-two">
                <Link to="./catalog"><button className="header__column-two-catalog-btn" type="button">≡ Каталог</button></Link>
-            </div>
-
-            <div className="header__column-three">
-                {/* <Search /> */}
             </div>
             
             <nav className="header__column-four-menu">
