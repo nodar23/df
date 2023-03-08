@@ -24,8 +24,8 @@ export const Header = () => {
         <div className="header__columns">
 
             <div className="header__column-one">
-               <Link to="./main"><img className="header__column-one-logo" src={Logo} alt='logo'/></Link>
-               <Link className="header__column-one-text" to="./main">Сытый пёс</Link>
+               <Link to="./"><img className="header__column-one-logo" src={Logo} alt='logo'/></Link>
+               <Link className="header__column-one-text" to="./">Сытый пёс</Link>
             </div>
 
             <div className="header__column-two">
