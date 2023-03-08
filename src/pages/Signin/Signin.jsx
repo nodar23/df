@@ -14,17 +14,8 @@ export const Signin = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  
-  const {
-      mutateAsync, isLoading, isError, error,
-    } = useMutation({
-      mutationFn: (values) => api.signIn(values)
-        .then((res) => {
-          // const dispatchingData = {
-          //   ...res.data,
-          //   token: res.token
-          // }
-          // dispatch(setUserData(dispatchingData))
+
+  const { mutateAsync, isLoading, isError, error } = useMutation({mutationFn: (values) => api.signIn(values).then((res) => {
           dispatch(setUserToken(res.token))
           dispatch(setUserName(res.data.name))
           dispatch(setUserEmail(res.data.email))
