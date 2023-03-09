@@ -1,3 +1,4 @@
+import { ProductItem } from "../../components/ProductItem/ProductItem";
 import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
 import { getSearchSelector } from "../../redux/slices/filterSlice";
@@ -6,30 +7,13 @@ import { api } from "../../api";
 import { withQuery } from "../../HOCs/withQuery";
 import "./index.css";
 
-
-const Product = ({name, pictures, price, wight}) => {
-  
-
-  return (
-    <>
-    <div className="product">
-      <img className="product__img" src={pictures} alt="product" />
-        <p className="product__name">{name}</p>
-        <p className="product__wight">{wight}</p>
-        <p className="product__price">{price}₽</p>
-        <button className="product__btn">В корзину</button>
-    </div>
-    </>
-  )
-}
-
 const ProductsInner = ({ products }) => {
   if (products) {
 
     return (
           <>
             {products.products.map((product) => (
-              <Product
+              <ProductItem
                 key={product._id}
                 id={product._id}
                 name={product.name}
