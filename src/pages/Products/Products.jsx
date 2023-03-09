@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
-import { getSearchSelector } from "../redux/slices/filterSlice";
-import { getUserInfoSelector } from "../redux/slices/userInfoSlice";
-import { api } from "../api";
-import { withQuery } from "../HOCs/withQuery";
+import { getSearchSelector } from "../../redux/slices/filterSlice";
+import { getUserInfoSelector } from "../../redux/slices/userInfoSlice";
+import { api } from "../../api";
+import { withQuery } from "../../HOCs/withQuery";
+import "./index.css";
 
 
 const Product = ({name, pictures, price, wight}) => {

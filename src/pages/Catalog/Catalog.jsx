@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { Products } from "./Products";
-import { Search } from "../components/Search";
-import { getUserInfoSelector } from "../redux/slices/userInfoSlice";
-import ProductsPage from "./ProductsPage";
+import { Products } from "../Products/Products";
+import { Search } from "../../components/Search/Search";
+import { getUserInfoSelector } from "../../redux/slices/userInfoSlice";
+import ProductsPage from "../ProductsPage";
+import "./index.css";
 
 export const Catalog = () => {
   const { token } = useSelector(getUserInfoSelector);

@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { validatorSignIn } from "./validatorSignIn";
 import { api } from "../../api";
 import { setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, setUserAbout } from "../../redux/slices/userInfoSlice";
+import "./index.css";
 
 export const Signin = () => {
   const initialValues = {

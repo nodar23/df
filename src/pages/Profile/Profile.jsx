@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-import { getUserInfoSelector } from "../redux/slices/userInfoSlice";
+import { getUserInfoSelector } from "../../redux/slices/userInfoSlice";
+import "./index.css";
 
 
 export const Profile = () => {

@@ -1,5 +1,5 @@
-import { Footer } from  "./components/Footer"
-import { Header } from "./components/Header";
+import { Footer } from  "./components/Footer/Footer"
+import { Header } from "./components/Header/Header";
 import { getUserInfoSelector } from "./redux/slices/userInfoSlice";
 import { useSelector } from "react-redux";
 import { Outlet, useLocation, Navigate } from "react-router-dom";

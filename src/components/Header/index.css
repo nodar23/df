@@ -1,0 +1,100 @@
+.header {
+    height: auto;
+    width: auto;
+}
+
+.header__columns {
+    background-color: #fff700;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    justify-content: center;
+    padding:20px 0px 20px 0px;
+    border-radius: 20px;
+    border: solid 0px #fff700;
+}
+
+.header__column-one {
+    justify-self: start;
+    align-self: center;
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.header__column-one-logo {
+    width: 50px;
+    height: auto;
+    padding-left: 18px;
+}
+
+.header__column-one-text {
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__column-two {
+    justify-self: center;
+    align-self: flex-end;
+}
+
+.header__column-two-catalog-btn {
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    border-radius: 10px;
+    color: #000000;
+    font-weight: 400;
+    background-color: #ffffff;
+    padding: 8px 15px 8px 15px;
+    margin-left: 15px;
+    border: 2px solid #000000;
+}
+
+.header__column-two-catalog-btn:hover {
+    color: #000000;
+    text-shadow: 0.5px 0 0 #000000;
+    cursor: pointer;
+    border: 2.5px solid #000000;
+}
+
+.header__column-three {
+    justify-self: start;
+    align-self: flex-end;
+}
+
+.header__column-four-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    font-size: 16px;
+    cursor: pointer;
+    padding-right: 100px;
+    padding-top: 25px;
+}
+
+.header__column-four-menu-link,
+.header__column-four-menu-link:active {
+    color: #000000;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.header__column-four-menu-link:hover{
+    text-shadow: 0.3px 0 0 #000000;
+}
+
+.header__column-four-menu-img {
+    width: 40px;
+    height: auto;
+}
+
+.header__column-four-menu-img:hover {
+    scale: 1.05;
+}
+
+header h1 {
+    font-weight: 400;
+}

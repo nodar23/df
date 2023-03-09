@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { validatorSignUp } from "./validatorSignUp";
 import { api } from "../../api";
+import "./index.css";
 
 export const Signup = () => {
   const initialValues = {

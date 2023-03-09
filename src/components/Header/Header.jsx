@@ -2,10 +2,11 @@ import React from "react";
 import { Link }  from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserInfoSelector, resetUserInfo } from "../redux/slices/userInfoSlice";
-import Logo from "../assets/img/logo.svg";
-import SigninLogo from "../assets/img/signin.svg";
-import AuthUserLogo from "../assets/img/authuser.svg";
+import { getUserInfoSelector, resetUserInfo } from "../../redux/slices/userInfoSlice";
+import Logo from "../../assets/img/logo.svg";
+import SigninLogo from "../../assets/img/signin.svg";
+import AuthUserLogo from "../../assets/img/authuser.svg";
+import "./index.css";
 
 export const Header = () => {
     const navigate = useNavigate()
