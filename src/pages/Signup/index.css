@@ -1,0 +1,75 @@
+.signup {
+    display: grid;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.signup {
+    min-height: calc(100vh - 400px);
+}
+
+.signup__input {
+    height: 2.5em;
+    width: auto;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #b3b3b3 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.signup__btn {
+    width: auto;
+    height: 2.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    border: none;
+    border-radius: 15px;
+    background-color: #fff700;
+    cursor: pointer;
+}
+
+.signup__btn:hover  {
+    text-shadow: 0.5px 0 0 #565656;
+}
+
+.signup__title {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.signup__link-to-signin {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    color: #000000;
+    display: inline;
+    border-bottom: 1px solid #000000;
+}
+
+.signup__link-to-signin:hover {
+    text-shadow: 0.5px 0 0 #565656;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.signup__link {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.signup__error {
+    color: #940a0a;
+    font-weight: 200;
+    font-size: 10px;
+    text-align: end;
+    padding: 0px;
+    margin: 0px;
+}

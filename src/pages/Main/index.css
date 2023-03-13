@@ -1,0 +1,12 @@
+.main {
+    display: grid;
+    min-height: calc(100vh - 380px);
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title {
+    text-align: center;
+    font-weight: 200;
+    font-size: 48px;
+}
