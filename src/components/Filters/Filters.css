@@ -1,0 +1,27 @@
+.filter {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 0.3em;
+  height: 1.5em;
+  align-items: center;
+  padding-right: 100px;
+}
+
+.filter button {
+  text-decoration: none;
+  border: solid 0px #000000;
+  border-radius: 10px;
+  color: #000000 ;
+  font-weight: 400;
+  background-color: #fff700;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  min-width: 6em;
+  font-size: 12px;
+}
+
+.filter button:hover {
+  text-shadow: 0.5px 0 0 #000000;
+  scale: 1.03;
+}

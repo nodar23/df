@@ -1,6 +1,5 @@
 import { LS_KEY } from "./constants";
 
-
 export const initState = {
   user: {
     token: '',
@@ -9,10 +8,13 @@ export const initState = {
     group: '',
     avatar: '',
     about: '',
+    id: '',
   },
   filter: {
     search: '',
-  }
+  },
+  cart: {},
+  favorite: [],
 }
 export const getInitState = () => {
   const dataFromLS = window.localStorage.getItem(LS_KEY)

@@ -4,18 +4,16 @@ import Telegram from "../../assets/img/telegram.svg";
 import "./index.css"
 
 export const Footer = () => {
-
     return <footer className="footer">
-
         <div className="footer__columns">
 
             <div className="footer__column-one">
-                    <div>
-                        <img className="footer__column-one-logo" src={Logo} alt='logo' />
-                    </div>
-                    <div>
-                        <p className="footer__column-one-text">© 2023 Интернет-магазин "Сытый пёс"</p>
-                    </div>
+                <div>
+                    <img className="footer__column-one-logo" src={Logo} alt='logo' />
+                </div>
+                <div>
+                    <p className="footer__column-one-text">© 2023 Интернет-магазин "Сытый пёс"</p>
+                </div>
             </div>
 
             <div className="footer__column-two">
@@ -60,6 +58,5 @@ export const Footer = () => {
             </div>
 
         </div>
-
     </footer>
 }

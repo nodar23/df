@@ -15,8 +15,8 @@
 .catalog__products {
     padding: 0px 100px 0px 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
     gap: 2em;
     justify-content: center;
 }
@@ -24,8 +24,12 @@
 .catalog__no-auth,
 .catalog__no-auth-text {
     text-align: center;
-    padding-bottom: 5em;
+    padding-bottom: 1em;
     min-height: calc(100vh - 660px);
+}
+
+.catalog__no-auth-text-emo {
+    padding-bottom: 5em;
 }
 
 .catalog__btn {

@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { validatorSignIn } from "./validatorSignIn";
-import { api } from "../../api";
+import { api } from "../../api/api";
 import { setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, setUserAbout } from "../../redux/slices/userInfoSlice";
 import "./index.css";
 

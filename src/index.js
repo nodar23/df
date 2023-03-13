@@ -11,10 +11,10 @@ import { Signup } from "./pages/Signup/Signup";
 import { Signin } from "./pages/Signin/Signin";
 import { Catalog } from "./pages/Catalog/Catalog";
 import { Profile } from "./pages/Profile/Profile";
-import { ProductsPage } from "./pages/ProductsPage";
-import { Cart } from "./pages/Cart/Cart";
-import { Favorites } from "./pages/Favorites/Favorites";
-import store from "./redux/store";
+import { ProductDetail } from "./pages/ProductDetail/ProductDetail";
+import { CartPage } from "./pages/Cart/Cart";
+import{ FavoritesPage } from "./pages/Favorites/Favorites"
+import { store } from "./redux/store";
 
 import "./index.css";
 
@@ -47,24 +47,24 @@ const router = createBrowserRouter(
           element: <Signin />,
         },
         {
-          path: 'catalog',
-          element: <Catalog />,
-        },
-        {
-          path: 'product_page',
-          element: <ProductsPage />,
-        },
-        {
-          path: 'cart',
-          element: <Cart />,
-        },
-        {
           path: 'profile',
           element: <Profile />,
         },
         {
+          path: 'catalog',
+          element: <Catalog />,
+        },
+        {
+          path: 'catalog/:productID',
+          element: <ProductDetail />,
+        },
+        {
           path: 'favorites',
-          element: <Favorites />,
+          element: <FavoritesPage />,
+        },
+        {
+          path: 'cart',
+          element: <CartPage />,
         },
       ],
     },

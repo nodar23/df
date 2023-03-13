@@ -1,25 +1,33 @@
 import React from "react";
-import { Link }  from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate }  from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfoSelector, resetUserInfo } from "../../redux/slices/userInfoSlice";
+import { getCartProductsSelector, resetCartInfo } from "../../redux/slices/cartSlice";
+import { getFavoriteSelector, resetFavoriteInfo } from "../../redux/slices/favoriteSlice";
 import Logo from "../../assets/img/logo.svg";
 import SigninLogo from "../../assets/img/signin.svg";
 import AuthUserLogo from "../../assets/img/authuser.svg";
+import CartOnLogo from "../../assets/img/carton.svg";
+import LikeOnLogo from "../../assets/img/likeon.svg";
 import "./index.css";
 
 export const Header = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { token } = useSelector(getUserInfoSelector)
+    const cart = useSelector(getCartProductsSelector)
+    const favorite = useSelector(getFavoriteSelector)
+    const cartLength = Object.keys(cart).length
+    const favoriteLength = favorite.length
 
     const logoutHandler = () => {
-        dispatch(resetUserInfo())
-        navigate('/')
+      dispatch(resetUserInfo())
+      dispatch(resetFavoriteInfo())
+      dispatch(resetCartInfo())
+      navigate('/')
       }
       
       return <header className="header">
-        {/* <p className="header__text">Сайт разработан с ошибками и нарушениями дедлайнов, но зато без потери мотивации и интереса :D</p> */}
         <div className="header__columns">
 
             <div className="header__column-one">
@@ -30,6 +38,17 @@ export const Header = () => {
             <div className="header__column-two">
                <Link to="./catalog"><button className="header__column-two-catalog-btn" type="button">≡ Каталог</button></Link>
             </div>
+
+            <nav className="header__column-three">
+                <Link to="./favorites" className="header__menu-favorite">
+                    <img className="header__column-four-menu-img" src={LikeOnLogo} alt="icon" />
+                    {favoriteLength ? <span className="header__menu-favoriteLength">{favoriteLength}</span> : ''}
+                    </Link>
+                <Link to="./cart" className="header__menu-cart">
+                    <img className="header__column-four-menu-img" src={CartOnLogo} alt="icon" />
+                    {cartLength ? <span className="header__menu-cartLength">{cartLength}</span> : ''}
+                </Link>
+            </nav>
             
             <nav className="header__column-four-menu">
                 {token ? <Link to="./profile"><img className="header__column-four-menu-img" src={AuthUserLogo} alt="AuthUser" /></Link> : <Link to="./signin"><img className="header__column-four-menu-img" src={SigninLogo} alt="SigninLogo" /></Link>}
@@ -37,6 +56,5 @@ export const Header = () => {
             </nav>
 
         </div>
-
         </header>
 }

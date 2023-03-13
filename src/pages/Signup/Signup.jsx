@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { validatorSignUp } from "./validatorSignUp";
-import { api } from "../../api";
+import { api } from "../../api/api";
 import "./index.css";
 
 export const Signup = () => {

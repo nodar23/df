@@ -3,12 +3,16 @@ import { getInitState } from "./initState";
 import { filterReducer } from "./slices/filterSlice";
 import { userInfoReducer } from "./slices/userInfoSlice";
 import { LS_KEY } from "./constants";
+import { cartReducer } from './slices/cartSlice'
+import { favoriteReducer } from './slices/favoriteSlice'
 
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     user: userInfoReducer,
     filter: filterReducer,
+    cart: cartReducer,
+    favorite: favoriteReducer,
   },
   preloadedState: getInitState(),
 })
@@ -16,6 +20,3 @@ const store = configureStore({
 store.subscribe(() => {
   window.localStorage.setItem(LS_KEY, JSON.stringify(store.getState()))
 })
-
-
-export default store;
