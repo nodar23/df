@@ -6,6 +6,7 @@ const MIN_DISCOUNT = 'MIN_DISCOUNT'
 const NEW_DATE = 'NEW_DATE'
 const OLD_DATE = 'OLD_DATE'
 
+
 export const NO_FILTER = {
   type: [NO_SORT],
   name: 'сбросить'
@@ -33,9 +34,9 @@ export const getFilteredProducts = ([...products], filterType) => {
     case NO_SORT:
       return products
     case HIGH_PRICE:
-      return products.sort((a, b) => b.price - a.price)
+      return products.sort((a, b) => b.price * ((100 - b.discount) / 100) - a.price * ((100 - a.discount) / 100))
     case LOW_PRICE:
-      return products.sort((a, b) => a.price - b.price)
+      return products.sort((a, b) => a.price * ((100 - a.discount) / 100) - b.price * ((100 - b.discount) / 100))
     case MAX_DISCOUNT:
       return products.filter((product) => !!product.discount).sort((a, b) => a.discount - b.discount)
     case MIN_DISCOUNT:

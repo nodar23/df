@@ -29,6 +29,7 @@ export const FilterItem = ({ type, clickFilterHandler, name }) => {
   }
 
   return (
+    <div className="filter__btn">
     <button
       type="button"
       onClick={clickHandler}
@@ -36,5 +37,6 @@ export const FilterItem = ({ type, clickFilterHandler, name }) => {
       {name}
       {name === 'сбросить' ? '' : renderArrow()}
     </button>
+    </div>
   )
 }
