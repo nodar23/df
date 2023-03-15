@@ -1,0 +1,104 @@
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+.footer__columns {
+    background-color:  #fff700;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 10px 100px 10px 100px;
+    border-radius: 20px;
+    border: solid 0px #fff700;
+    font-size: 14px;
+    margin-top: 8em;
+     
+}
+
+@media only screen and (orientation: portrait) and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-device-pixel-ratio: 3){
+	.footer__columns {
+        background-color:  #fff700;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+        /* align-items: center; */
+        /* justify-items: center; */
+        /* text-align: center; */
+        padding: 10px 100px 70px 100px;
+        border-radius: 20px;
+        border: solid 0px #fff700;
+        font-size: 14px;
+        /* margin-top: 8em;  */
+    }
+}
+
+.footer__columns a:active,
+.footer__columns a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer__columns a:hover {
+    text-shadow: 0.3px 0 0 #000000;
+}
+
+.footer__column-one {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer__column-one-logo {
+    width: auto;
+    height: 30px;
+}
+
+.footer__column-two {
+    /* justify-self: center; */
+    /* justify-content: space-between; */
+}
+
+.footer__columns ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.footer__column-three {
+    /* justify-self: center; */
+}
+
+.footer__column-four {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-row-gap: 10px;
+    /* justify-self: end; */
+}
+
+.footer__column-four-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer__column-four-phone {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer__column-four-telegram,
+.footer__column-four-mail{
+    width: 15px;
+    height: auto;
+    cursor: pointer;
+}
+
+.footer__column-four-telegram:hover {
+    scale: 1.05;
+}
+
+.footer__column-four-mail:hover {
+    text-shadow: 0.3px 0 0 #000000;
+}
