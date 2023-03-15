@@ -31,7 +31,7 @@ function ProductsInner({ products }) {
 
 const ProductsInnerWithQuery = withQuery(ProductsInner)
 
-export function ProductsPage() {
+export function Products() {
   const { token } = useSelector(getUserInfoSelector)
   const search = useSelector(getSearchSelector)
 

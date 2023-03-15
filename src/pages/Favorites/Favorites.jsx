@@ -9,35 +9,38 @@ import { ProductItem } from "../../components/ProductItem/ProductItem";
 import { api } from "../../api/api";
 import "./index.css";
 
+const emptyFavorites = (
+          <div className="favorites">
+              <p className="favorites__title">Избранные товары</p>
+              <p className="favorites__text">увы, но тут пусто, <br />перейдите в каталог, чтобы отметить понравившиеся товары</p>
+              <p className="favorites__text"> ╮( ˘ ､ ˘ )╭</p> 
+              <Link className="favorites__btn" to="../catalog">Каталог</Link>
+          </div>
+)
+
 const FavoritesInner = ({ products }) => {
-  if (products.length === 0) {
+    if (products.length === 0) {
+        return emptyFavorites;
+    }
+
     return (
-        <div className="favorites">
-            <p className="favorites__title">Избранные товары</p>
-            <p className="favorites__text">увы, но тут пусто, <br />перейдите в каталог, чтобы отметить понравившиеся товары</p>
-            <p className="favorites__text"> ╮( ˘ ､ ˘ )╭</p> 
-            <Link className="favorites__btn" to="../catalog">Каталог</Link>
-        </div>
-    )
-  }
-  return (
-        <div className="favorites">
+    <div className="favorites">
         <p className="favorites__title">Избранные товары</p>
         <div className="favorites__list">
-          {products.map((product) => (
+            {products.map((product) => (
             <ProductItem
-              key={product._id}
-              id={product._id}
-              name={product.name}
-              price={product.price}
-              pictures={product.pictures}
-              wight={product.wight}
-              discount={product.discount}
+            key={product._id}
+            id={product._id}
+            name={product.name}
+            price={product.price}
+            pictures={product.pictures}
+            wight={product.wight}
+            discount={product.discount}
             />
-          ))}
+            ))}
         </div>
-      </div>
-      )
+    </div>
+    )
 }
 
 const FavoritesInnerWithQuery = withQuery(FavoritesInner)

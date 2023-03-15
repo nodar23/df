@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate }  from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfoSelector, resetUserInfo } from "../../redux/slices/userInfoSlice";
-import { getCartProductsSelector, resetCartInfo } from "../../redux/slices/cartSlice";
+import { getCartProductsSelector, clearCart } from "../../redux/slices/cartSlice";
 import { getFavoriteSelector, resetFavoriteInfo } from "../../redux/slices/favoriteSlice";
 import Logo from "../../assets/img/logo.svg";
 import SigninLogo from "../../assets/img/signin.svg";
@@ -23,7 +23,7 @@ export const Header = () => {
     const logoutHandler = () => {
       dispatch(resetUserInfo())
       dispatch(resetFavoriteInfo())
-      dispatch(resetCartInfo())
+      dispatch(clearCart())
       navigate('/')
       }
       
@@ -36,7 +36,7 @@ export const Header = () => {
             </div>
 
             <div className="header__column-two">
-               <Link to="./catalog"><button className="header__column-two-catalog-btn" type="button">≡ Каталог</button></Link>
+               <Link to="./catalog"><button className="header__column-two-catalog-btn" type="button">Каталог</button></Link>
             </div>
 
             <nav className="header__column-three">

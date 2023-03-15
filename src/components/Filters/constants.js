@@ -44,5 +44,8 @@ export const getFilteredProducts = ([...products], filterType) => {
       return products.sort((a, b) => Date.parse(a.created_at) - Date.parse(b.created_at))
     case NEW_DATE:
       return products.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
+    
+    default:
+      break;
   }
 }

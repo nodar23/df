@@ -43,9 +43,6 @@ const cartSlice = createSlice({
         return id
       })
     },
-    resetCartInfo() {
-      return initState.cart
-    },
   },
 })
 

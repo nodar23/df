@@ -84,12 +84,12 @@ const CartPageInnerWithQuery = withQuery(CartPageInner)
 
 export const CartPage =() => {
     const { token } = useSelector(getUserInfoSelector)
-    const dispatch = useDispatch()
     const cart = useSelector(getCartProductsSelector)
     const ids = Object.keys(cart)
-    const clearCartHandler = () => {dispatch(clearCart())}
-    const isCheckedOnTrueHandler = () => {dispatch(changeAllStatusOnTrue())}
-    const isCheckedOnFalseHandler = () => {dispatch(changeAllStatusOnFalse())}
+    const dispatch = useDispatch()
+    const clearCartHandler = () => dispatch(clearCart())
+    const isCheckedOnTrueHandler = () => dispatch(changeAllStatusOnTrue())
+    const isCheckedOnFalseHandler = () => dispatch(changeAllStatusOnFalse())
 
     const { data, isLoading } = useQuery({
     queryKey: ['cart', ids],
@@ -103,7 +103,7 @@ export const CartPage =() => {
         if (products) {
             let sumAllProduct = 0
             let sumAllProductWithoutDiscount = 0
-            products.map((product) => {
+            products.forEach((product) => {
                 if (cart[product._id].isChecked) {
                     const { count } = cart[product._id]
                 if (product.discount) {
@@ -113,7 +113,7 @@ export const CartPage =() => {
             sumAllProduct += product.price * count
           }
           sumAllProductWithoutDiscount += product.price * count
-          return sumAllProduct
+          return sumAllProduct;
         }
       })
       return [sumAllProduct, sumAllProductWithoutDiscount]
