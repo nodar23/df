@@ -41,17 +41,17 @@ export const Header = () => {
 
             <nav className="header__column-three">
                 <Link to="./favorites" className="header__menu-favorite">
-                    <img className="header__column-four-menu-img" src={LikeOnLogo} alt="icon" />
+                    <img className="header__column-three-menu-img" src={LikeOnLogo} alt="icon" />
                     {favoriteLength ? <span className="header__menu-favoriteLength">{favoriteLength}</span> : ''}
                     </Link>
                 <Link to="./cart" className="header__menu-cart">
-                    <img className="header__column-four-menu-img" src={CartOnLogo} alt="icon" />
+                    <img className="header__column-three-menu-img" src={CartOnLogo} alt="icon" />
                     {cartLength ? <span className="header__menu-cartLength">{cartLength}</span> : ''}
                 </Link>
             </nav>
             
             <nav className="header__column-four-menu">
-                {token ? <Link to="./profile"><img className="header__column-four-menu-img" src={AuthUserLogo} alt="AuthUser" /></Link> : <Link to="./signin"><img className="header__column-four-menu-img" src={SigninLogo} alt="SigninLogo" /></Link>}
+                {token ? <Link className="header__column-four-menu-img" to="./profile"><img className="header__column-four-menu-img" src={AuthUserLogo} alt="AuthUser" /></Link> : <Link to="./signin"><img className="header__column-four-menu-img" src={SigninLogo} alt="SigninLogo" /></Link>}
                 <Link className="header__column-four-menu-link" onClick={logoutHandler} to="./signin">{token ? 'Выйти' : ''}</Link>
             </nav>
 

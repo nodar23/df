@@ -15,7 +15,6 @@
 .catalog__products {
     padding: 0px 100px 0px 100px;
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
     justify-content: center;
@@ -45,4 +44,13 @@
 .catalog__btn:hover {
     text-shadow: 0.3px 0 0 #000000;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 420px) {
+
+    .catalog__products {
+        padding: 0px 45px 0px 45px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }

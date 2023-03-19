@@ -15,6 +15,7 @@ import { ProductDetail } from "./pages/ProductDetail/ProductDetail";
 import { CartPage } from "./pages/Cart/Cart";
 import{ FavoritesPage } from "./pages/Favorites/Favorites"
 import { store } from "./redux/store";
+import { AddNewProduct } from "./pages/AddNewProduct/AddNewProduct";
 
 import "./index.css";
 
@@ -65,6 +66,10 @@ const router = createBrowserRouter(
         {
           path: 'cart',
           element: <CartPage />,
+        },
+        {
+          path: 'add-new-product',
+          element: <AddNewProduct />,
         },
       ],
     },

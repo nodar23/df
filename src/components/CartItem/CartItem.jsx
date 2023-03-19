@@ -38,7 +38,7 @@ export const CartItem = ({ id, name, pictures, price, wight, stock, discount }) 
 
       <div className="cart-item__column-two">
         <p className="cart-item__column-two-name">{name}</p>
-        <p>в наличии:{' '}{stock}{' '}шт{' '}</p>
+        <p className="cart-item__column-two-in-stock">в наличии:{' '}{stock}{' '}шт{' '}</p>
         <p className="cart-item__column-two-wight">{wight}</p>
       </div>
 
