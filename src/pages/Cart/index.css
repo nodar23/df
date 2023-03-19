@@ -104,8 +104,14 @@
 
 @media only screen and (max-width: 420px) {
 
+    .cart__title {
+        margin-left: 4em;
+    }
+    
+
     .cart__columns {
         padding: 0px 0px 0px 0px;
+        margin-left: 4em;
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -123,10 +129,13 @@
         grid-template-columns: 1fr;
         justify-self: center;
     }
+
+    .cart__handlers {
+        margin-left: 5em;
   
   }
 
-
+}
 
 
 

@@ -70,9 +70,19 @@
 
 @media only screen and (max-width: 420px) {
 
-    .new-product__form {
-        padding-left: 1em;
+    .new-product__title {
+        padding-left: 3em;
         padding-right: 1em;
     }
+
+    .new-product__form {
+        padding-left: 4em;
+        padding-right: 1em;
+    }
+
+    .new-product__link {
+        padding-left: 1em;
+    }
+
 
 }

@@ -44,9 +44,14 @@
 
   .favorites__list {
     grid-template-columns: 1fr;
-    padding: 0px 45px 0px 45px;
+    padding: 0px 30px 0px 30px;
     gap: 1em;
     justify-content: center;
+    margin-left: 4em;
+  }
+
+  .favorites__title {
+    margin-left: 3em;
   }
 
 }

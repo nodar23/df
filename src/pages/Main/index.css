@@ -10,3 +10,19 @@
     font-weight: 200;
     font-size: 48px;
 }
+
+@media only screen and (max-width: 420px) {
+
+    .main {
+        margin-left: 6em;
+        padding-bottom: 8em;
+    }
+    
+    .main__title {
+        text-align: center;
+        font-weight: 200;
+        font-size: 48px;
+    }
+  
+  }
+  

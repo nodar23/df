@@ -50,9 +50,11 @@
 }
 
 @media only screen and (max-width: 420px) {
+
     .profile {
-        padding: 0px 0px 0px 0px;
+        padding: 0px 0px 8em 0px;
         text-align: center;
+        margin-left: 4em;
     }
 
     .profile__btn {
@@ -65,11 +67,9 @@
         text-decoration: none;
 
     }
-
     
     .profile__avatar img {
         width: 6em;
     }
-    
 
   }

@@ -85,7 +85,8 @@
 
 @media only screen and (max-width: 420px) {
     .footer {
-        min-width: 360px;
+        min-width: 450px;   
+        margin-left: -0.2em; 
     }
 
     .footer__columns {
