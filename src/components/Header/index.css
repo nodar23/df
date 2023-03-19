@@ -67,6 +67,14 @@
     grid-column-gap: 0.3em;
 }
 
+.header__menu-favorite:hover {
+    scale: 1.05;
+}
+
+.header__menu-cart:hover {
+    scale: 1.05;
+}
+
 .header__menu-cart,
 .header__menu-favorite {
     text-decoration: none;
