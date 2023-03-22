@@ -10,6 +10,5 @@ export const validatorAddNewProduct = () => Yup.object({
     .required('Обязательное поле'),
   wight: Yup.string(),
   discount: Yup.string(),
-  stock: Yup.string(),
-  available: Yup.boolean(),
+  stock: Yup.string()
 })
