@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { initState } from '../initState'
+import { createSlice } from "@reduxjs/toolkit";
+import { initState } from "../initState";
 
 const favoriteSlice = createSlice({
   name: 'favorite',
@@ -25,5 +25,4 @@ export const {
 } = favoriteSlice.actions
 
 export const getFavoriteSelector = (state) => state.favorite
-
 export const favoriteReducer = favoriteSlice.reducer

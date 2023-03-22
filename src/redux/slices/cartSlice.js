@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { initState } from '../initState'
+import { createSlice } from "@reduxjs/toolkit";
+import { initState } from "../initState";
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -59,5 +59,4 @@ export const {
 } = cartSlice.actions
 
 export const getCartProductsSelector = (state) => state.cart
-
 export const cartReducer = cartSlice.reducer

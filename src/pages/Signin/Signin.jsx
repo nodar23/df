@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { validatorSignIn } from "./validatorSignIn";
 import { api } from "../../api/api";
-import { setUserToken, setUserName, setUserEmail, setUserGroup, setUserAvatar, setUserAbout } from "../../redux/slices/userInfoSlice";
+import { setUserData } from "../../redux/slices/userInfoSlice";
 import "./index.css";
 
 export const Signin = () => {
@@ -17,12 +17,10 @@ export const Signin = () => {
   const dispatch = useDispatch();
 
   const { mutateAsync, isLoading, isError, error } = useMutation({mutationFn: (values) => api.signIn(values).then((res) => {
-          dispatch(setUserToken(res.token))
-          dispatch(setUserName(res.data.name))
-          dispatch(setUserEmail(res.data.email))
-          dispatch(setUserGroup(res.data.group))
-          dispatch(setUserAvatar(res.data.avatar))
-          dispatch(setUserAbout(res.data.about))
+          dispatch(setUserData({
+            ...res.data,
+            token: res.token 
+          }))
         }),
     })
   

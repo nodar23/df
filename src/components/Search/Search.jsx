@@ -10,7 +10,7 @@ export const Search = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [search, setSearch] = useState(() => {
       const searchValueFromQuery = searchParams.get('q')
-      return searchValueFromQuery ?? ''
+      return searchValueFromQuery ? searchValueFromQuery : ''
     })
   
     const dispatch = useDispatch()

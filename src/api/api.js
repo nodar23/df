@@ -49,7 +49,7 @@ class Api {
       throw new Error(`Ошибка, код ${res.status}`)
     }
   }
-
+  
   getProductsByIds(ids, token) {
     return Promise.all(ids.map((id) => fetch(`${this.baseURL}/products/${id}`, {
       headers: {

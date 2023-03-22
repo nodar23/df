@@ -15,7 +15,7 @@ export const Profile = () => {
             <p className="profile__text">Профессия/деятельность: {profile.about}</p>
             <div className="profile__avatar"><img  src={profile.avatar} alt="avatar" /></div>
             <p>
-              <Link className="profile__btn" to="/add-new-product">Добавить новый товар в каталог</Link>  
+              <Link className="profile__btn" to="/add-new-product"><span>Добавить новый товар в каталог</span></Link>  
             </p>
           </div>
     )
