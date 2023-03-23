@@ -17,17 +17,17 @@ export const Signin = () => {
   const dispatch = useDispatch();
 
   const { mutateAsync, isLoading, isError, error } = useMutation({mutationFn: (values) => api.signIn(values).then((res) => {
-          dispatch(setUserData({
-            ...res.data,
-            token: res.token 
-          }))
-        }),
-    })
+    dispatch(setUserData({
+      ...res.data,
+      token: res.token
+    }))
+   })
+  })
   
-    const submitHandler = async (values) => {
-      await mutateAsync(values)
-      setTimeout(() => navigate('/catalog'))
-    };
+  const submitHandler = async (values) => {
+    await mutateAsync(values)
+    setTimeout(() => navigate('/catalog'))
+  }
     
     return ( 
     <Formik
