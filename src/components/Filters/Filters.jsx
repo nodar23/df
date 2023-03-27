@@ -7,6 +7,8 @@ import "./Filters.css";
 const FILTERS = [PRICE_FILTER, DISCOUNT_FILTER, DATE_FILTER]
 
 export const Filters = () => {
+  const navigate = useNavigate()
+  const resetFilter = () => navigate('/catalog')
   const [searchParams, setSearchParams] = useSearchParams()
 
   const clickFilterHandler = (filterType, isActive) => {
@@ -14,10 +16,6 @@ export const Filters = () => {
     else searchParams.set(FILTER_QUERY_NAME, filterType)
     setSearchParams(searchParams)
   }
-
-  const navigate = useNavigate()
-
-  const resetFilter = () => navigate('/catalog')
 
   return (
     <div className="filter">
