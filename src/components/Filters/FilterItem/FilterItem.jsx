@@ -29,8 +29,9 @@ export const FilterItem = ({ type, clickFilterHandler, name }) => {
   }
 
   return (
-    <div className="filter__btn">
+    <div>
     <button
+      className="filter__btn"
       type="button"
       onClick={clickHandler}
     >

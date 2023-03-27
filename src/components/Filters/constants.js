@@ -1,16 +1,9 @@
-const NO_SORT = 'NO_SORT'
 const LOW_PRICE = 'LOW_PRICE'
 const HIGH_PRICE = 'HIGH_PRICE'
 const MAX_DISCOUNT = 'MAX_DISCOUNT'
 const MIN_DISCOUNT = 'MIN_DISCOUNT'
 const NEW_DATE = 'NEW_DATE'
 const OLD_DATE = 'OLD_DATE'
-
-
-export const NO_FILTER = {
-  type: [NO_SORT],
-  name: 'сбросить'
-}
 
 export const PRICE_FILTER = {
   type: [LOW_PRICE, HIGH_PRICE],
@@ -31,8 +24,6 @@ export const FILTER_QUERY_NAME = 'filterType';
 
 export const getFilteredProducts = ([...products], filterType) => {
   switch (filterType) {
-    case NO_SORT:
-      return products
     case HIGH_PRICE:
       return products.sort((a, b) => b.price * ((100 - b.discount) / 100) - a.price * ((100 - a.discount) / 100))
     case LOW_PRICE:

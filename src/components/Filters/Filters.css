@@ -8,7 +8,7 @@
   padding-right: 100px;
 }
 
-.filter button {
+.filter__btn {
   text-decoration: none;
   border: solid 0px #000000;
   border-radius: 10px;
@@ -21,9 +21,23 @@
   font-size: 12px;
 }
 
-.filter button:hover {
+.filter__btn:hover,
+.filter__reset-btn:hover {
   text-shadow: 0.5px 0 0 #000000;
   scale: 1.03;
+}
+
+.filter__reset-btn {
+  text-decoration: none;
+  border: solid 0px #000000;
+  border-radius: 10px;
+  color: #ffffff ;
+  font-weight: 400;
+  background-color: #3d3d3d;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  min-width: 6em;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 420px) {
