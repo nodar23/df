@@ -3,7 +3,7 @@ import * as Yup from "yup";
 export const validatorAddNewProduct = () => Yup.object({
   name: Yup.string()
     .required('Обязательное поле'),
-  pictures: Yup.string(),
+  pictures: Yup.string().url(),
   price: Yup.number()
     .required('Обязательное поле'),
   description: Yup.string()

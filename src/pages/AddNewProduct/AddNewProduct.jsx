@@ -85,7 +85,7 @@ export const AddNewProduct = () => {
           </Form>
         </Formik>
         <p className="new-product__link">&#8594;
-          <Link className="new-product__link" to="/catalog?filterType=NEW_DATE">посмотреть новые товары в каталоге</Link>  
+          <Link className="new-product__link" to="/catalog?filterType=new_date">посмотреть новые товары в каталоге</Link>  
         </p>
       </>
     )
