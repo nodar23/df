@@ -1,0 +1,17 @@
+.catalog__search {
+    padding-bottom: 1em;
+    justify-self: center;
+}
+
+.catalog__search-input {
+    width: 20rem;
+    height: 2rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.catalog__search-input:hover {
+    border: 2px solid #000000;
+}

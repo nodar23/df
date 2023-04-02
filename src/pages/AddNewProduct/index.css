@@ -1,0 +1,88 @@
+.new-product__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px 0px 10px 0px;
+}
+
+.new-product__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 0.8em;
+}
+
+.new-product__form div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-start;
+    row-gap: 0.5em;
+    align-items: center
+}
+
+.new-product__btn {
+    border: solid 0px #000000;
+    border-radius: 10px;
+    color: #000000 ;
+    font-weight: 400;
+    background-color: #fff700;
+    padding: 8px 15px 8px 15px;
+    margin-top: 1em;
+}
+
+.new-product__btn:hover {
+    text-shadow: 0.3px 0 0 #000000;
+    cursor: pointer;
+    scale: 1.02;
+}
+
+.new-product__link {
+    color: #000000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.new-product__link:hover {
+    text-shadow: 0.3px 0 0 #000000;
+}
+
+.new-product__error {
+    color: #940a0a;
+    font-weight: 200;
+    font-size: 10px;
+    text-align: end;
+    padding: 0px;
+    margin: 0px;
+}
+
+.new-product__input {
+    height: 2em;
+    width: auto;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #b3b3b3 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 420px) {
+
+    .new-product__title {
+        padding-left: 3em;
+        padding-right: 1em;
+    }
+
+    .new-product__form {
+        padding-left: 4em;
+        padding-right: 1em;
+    }
+
+    .new-product__link {
+        padding-left: 1em;
+    }
+
+
+}
